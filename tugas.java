@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class tugas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        
+        
+    }
+    public static void menu(String{} args) {
         System.out.println("=== PENCATATAN PRESTASI MAHASISWA ===");
         System.out.println("1. Tambah Data Prestasi");
         System.out.println("2. Tampilkan Semua Prestasi");
