@@ -2,7 +2,7 @@ package kolab;
 
 import java.util.Scanner;
 
-public class kelompokrayaraihan {
+public class kelompokraya25raihan24 {
     static String[][] dataPrestasi = new String[100][5]; 
     static int jumlahPrestasi = 0; 
     static Scanner sc = new Scanner(System.in);
