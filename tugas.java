@@ -5,16 +5,16 @@ import java.util.Scanner;
 public class tugas {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        
+        int menu;
+        menu();
+        System.out.print("Pilih menu: ");
+        menu = sc.nextInt();
     }
-    public static void menu(String{} args) {
+    public static void menu() {
         System.out.println("=== PENCATATAN PRESTASI MAHASISWA ===");
         System.out.println("1. Tambah Data Prestasi");
         System.out.println("2. Tampilkan Semua Prestasi");
-        System.out.println("Analisi Prestasi Berdasarkan Jenis");
-        System.out.println("Keluar");
-        System.out.println("Pilih menu: 2");
-        System.out.println("Belum ada data prestasi");
+        System.out.println("3. Analisi Prestasi Berdasarkan Jenis");
+        System.out.println("4. Keluar");
     }
 }
