@@ -37,4 +37,19 @@ public class tugas {
                 }
             }
         }
+        static void tambahPrestasi(){
+            if (jumlahPrestasi >= 100) {
+                System.out.println("Kapasitas penuh! Tidak bisa tambah data lagi!!");
+                return;
+            }
+            System.out.print("Masukkan Nama Mahasiswa: ");
+            nama[jumlahPrestasi] = sc.nextLine();
+            System.out.print("Masukkan NIM Mahasiswa: ");
+            nim[jumlahPrestasi] = sc.nextInt();
+            System.out.print("Masukkan Jenis Prestasi: ");
+            jenis[jumlahPrestasi] = sc.nextLine();
+            System.out.print("Masukkan Tingkat Prestasi (Lokal / Nasional / Internasional): ");
+            tingkat[jumlahPrestasi] = sc.nextLine();
+            
+        }
 }
