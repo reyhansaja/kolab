@@ -3,9 +3,9 @@ package kolab;
 import java.util.Scanner;
 
 public class tugas {
-    static String[][] dataPrestasi = new String[100][5]; // Array 2 dimensi (maksimum 100 data, 5 kolom)
-    static int jumlahPrestasi = 0; // Indeks untuk melacak jumlah data
-    static Scanner input = new Scanner(System.in);
+    static String[][] dataPrestasi = new String[100][5]; 
+    static int jumlahPrestasi = 0; 
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         int pilihan = 0;
@@ -17,8 +17,8 @@ public class tugas {
             System.out.println("3. Cari Prestasi Berdasarkan Jenis");
             System.out.println("4. Keluar");
             System.out.print("Pilih menu: ");
-            pilihan = input.nextInt();
-            input.nextLine(); // Membersihkan buffer input
+            pilihan = sc.nextInt();
+            sc.nextLine(); 
 
             if (pilihan == 1) {
                 tambahPrestasi();
@@ -40,13 +40,13 @@ public class tugas {
     }
 
     System.out.print("Masukkan Nama Mahasiswa: ");
-    dataPrestasi[jumlahPrestasi][0] = input.nextLine();
+    dataPrestasi[jumlahPrestasi][0] = sc.nextLine();
     System.out.print("Masukkan NIM Mahasiswa: ");
-    dataPrestasi[jumlahPrestasi][1] = input.nextLine();
+    dataPrestasi[jumlahPrestasi][1] = sc.nextLine();
     System.out.print("Masukkan Jenis Prestasi: ");
-    dataPrestasi[jumlahPrestasi][2] = input.nextLine();
+    dataPrestasi[jumlahPrestasi][2] = sc.nextLine();
     System.out.print("Masukkan Tingkat Prestasi (Lokal/Nasional/Internasional): ");
-    dataPrestasi[jumlahPrestasi][3] = input.nextLine();
+    dataPrestasi[jumlahPrestasi][3] = sc.nextLine();
 
     if (!dataPrestasi[jumlahPrestasi][3].equalsIgnoreCase("Lokal") && 
         !dataPrestasi[jumlahPrestasi][3].equalsIgnoreCase("Nasional") && 
@@ -56,8 +56,8 @@ public class tugas {
     }
 
     System.out.print("Masukkan Tahun Prestasi (2010 - 2024): ");
-    int tahunPrestasi = input.nextInt();
-    input.nextLine(); // Membersihkan buffer input
+    int tahunPrestasi = sc.nextInt();
+    sc.nextLine(); 
 
     if (tahunPrestasi < 2010 || tahunPrestasi > 2024) {
         System.out.println("Tahun tidak valid. Harus antara 2010 dan 2024.");
@@ -86,7 +86,7 @@ static void lihatSemuaPrestasi() {
 
 static void cariPrestasi() {
     System.out.print("Masukkan Jenis Prestasi yang ingin dicari: ");
-    String jenisDicari = input.nextLine();
+    String jenisDicari = sc.nextLine();
     boolean ditemukan = false;
 
     System.out.println("\n=== HASIL PENCARIAN ===");
