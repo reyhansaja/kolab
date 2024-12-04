@@ -3,18 +3,38 @@ package kolab;
 import java.util.Scanner;
 
 public class tugas {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int menu;
-        menu();
-        System.out.print("Pilih menu: ");
-        menu = sc.nextInt();
-    }
-    public static void menu() {
-        System.out.println("=== PENCATATAN PRESTASI MAHASISWA ===");
-        System.out.println("1. Tambah Data Prestasi");
-        System.out.println("2. Tampilkan Semua Prestasi");
-        System.out.println("3. Analisi Prestasi Berdasarkan Jenis");
-        System.out.println("4. Keluar");
-    }
+        static Scanner sc = new Scanner(System.in);
+        static String[] nama = new String[100];
+        static int[] nim = new int[100];
+        static String[] jenis = new String[100];
+        static String[] tingkat = new String[100];
+        static int[] tahun = new int[100];
+        static int jumlahPrestasi = 0;
+
+        public static void main(String[] args) {
+            int pilihan = 0;
+
+            while(pilihan !=0){
+                System.out.println("\n=== MENU PRESTASI MAHASISWA ===");
+                System.out.println("1. Tambah Data Prestasi");
+                System.out.println("2. Tapilkan Semua Prestasi");
+                System.out.println("3. Analisis Prestasi Berdasarkan Jenis");
+                System.out.println("4. Keluar");
+                System.out.print("Pilih menu");
+                pilihan = sc.nextInt();
+                sc.nextLine();
+
+                if(pilihan == 1){
+                    tambahPrestasi();
+                }else if(pilihan == 2){
+                    lihatSemuaPrestasi();
+                }else if(pilihan == 3){
+                    cariPrestasi();
+                }else if(pilihan == 4){
+                    System.out.println("Program selesai, terima kasih :)");
+                }else{
+                    System.out.println("Pilihan salah, coba lagi");
+                }
+            }
+        }
 }
