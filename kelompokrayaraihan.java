@@ -2,12 +2,13 @@ package kolab;
 
 import java.util.Scanner;
 
-public class tugas {
+public class kelompokrayaraihan {
     static String[][] dataPrestasi = new String[100][5]; 
     static int jumlahPrestasi = 0; 
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        System.out.println("========DATA PRESTASI MAHASISWA===========");
         int pilihan = 0;
 
         while (pilihan != 4) {
